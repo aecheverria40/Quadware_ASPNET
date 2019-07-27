@@ -32,17 +32,15 @@ namespace Quadware_Project
             bundles.Add(new ScriptBundle("~/bundle/materializejs").Include(
                 "~/Content/bootstrap-material-design/js/bootstrap-material-design.js"));
 
+            bundles.Add(new StyleBundle("~/Content/navbar-fixed").Include(
+                "~/Content/bootstrap-material-design/navbar-top-fixed.css"
+                ));
+
             bundles.Add(new ScriptBundle("~/bundle/popperjs").Include(
-                "~/Scripts/popper.js"));
+                "~/Scripts/umd/popper.js"));
 
-            //Material Desing Lite
-            bundles.Add(new StyleBundle("~/Content/mdl").Include(
-                "~/Content/mdl/material.css"
-                ));
-
-            bundles.Add(new ScriptBundle("~/bundles/mdljs").Include(
-                "~/Content/mdl/material.js"
-                ));
+            bundles.Add(new ScriptBundle("~/bundle/popperjsutils").Include(
+                "~/Scripts/umd/popper-utils.js"));
         }
     }
 }
