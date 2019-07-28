@@ -146,7 +146,7 @@
     <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\customcss\custom.css" />
+    <Content Include="Content\estilos\gradient-colors.css" />
     <Content Include="Content\fontawesome\css\all.css" />
     <Content Include="Content\fontawesome\css\all.min.css" />
     <Content Include="Content\fontawesome\css\brands.css" />
@@ -1800,6 +1800,7 @@
     <Content Include="Content\fontawesome\webfonts\fa-solid-900.ttf" />
     <Content Include="Content\fontawesome\webfonts\fa-solid-900.woff" />
     <Content Include="Content\fontawesome\webfonts\fa-solid-900.woff2" />
+    <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />

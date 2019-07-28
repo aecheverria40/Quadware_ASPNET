@@ -43,12 +43,19 @@ namespace Quadware_Project
                 "~/Scripts/umd/popper-utils.js"));
 
             //Custom CSS
-            bundles.Add(new StyleBundle("~/Content/customcss").Include(
-                "~/Content/customcss/custom.css"));
+            bundles.Add(new StyleBundle("~/Content/coloreschidos").Include(
+                "~/Content/estilos/gradient-colors.css"));
 
             //Fontawsone
-            bundles.Add(new StyleBundle("~/Content/fontawsome").Include(
-                "~/Content/fontawesome/css/all.min.css"));
+            bundles.Add(new StyleBundle("~/Content/iconos").Include(
+                "~/Content/fontawesome/css/fontawesome.css"));
+
+            bundles.Add(new StyleBundle("~/Content/marca").Include(
+                "~/Content/fontawesome/css/brand.css"));
+
+            bundles.Add(new StyleBundle("~/Content/colorsolido").Include(
+                "~/Content/fontawesome/css/solid.css"));
+
         }
     }
 }

@@ -10,8 +10,10 @@
 
     @Styles.Render("~/content/materialize")
     @Styles.Render("~/content/navbar-fixed")
-    @Styles.Render("~/Content/customcss")
-    @Styles.Render("~/Content/fontawsome")
+    @Styles.Render("~/Content/coloreschidos")
+    @*@Styles.Render("~/Content/iconos")
+    @Styles.Render("~/Content/marca")
+    @Styles.Render("~/Content/colorsolido")*@
     @Scripts.Render("~/bundles/modernizr")
 
     <link rel="icon" href="~/Content/media/favicon.ico">
@@ -51,20 +53,20 @@
                 </li>
             </ul>
         </div>
-        
+
     </nav>
 
 
 
     <main class="container-fluid" role="main">
         @*<div class="container-fluid">*@
-            @RenderBody()
+        @RenderBody()
 
-            <hr />
-            <footer>
-                <p>&copy; @DateTime.Now.Year - Quadware</p>
-                <p>Siguenos en nuestras rede sosicales. (Poner iconos de redes sociales)</p>
-            </footer>
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Quadware</p>
+            <p>Siguenos en nuestras rede sosicales. (Poner iconos de redes sociales)</p>
+        </footer>
         @*</div>*@
     </main>
 
@@ -100,6 +102,7 @@
     </div>
 
     @Scripts.Render("~/bundles/jquery")
+    <script src="https://kit.fontawesome.com/5a52924003.js"></script>
     @Scripts.Render("~/bundle/popperjsutils")
     @Scripts.Render("~/bundle/popperjs")
     @Scripts.Render("~/bundle/materializejs")
