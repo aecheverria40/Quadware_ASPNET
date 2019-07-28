@@ -7,11 +7,14 @@
     <title>Quadware</title>
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
-    
+
     @Styles.Render("~/content/materialize")
     @Styles.Render("~/content/navbar-fixed")
+    @Styles.Render("~/Content/customcss")
+    @Styles.Render("~/Content/fontawsome")
     @Scripts.Render("~/bundles/modernizr")
-    <link rel="icon" src="~/Content/media/quadware_logo_icon.ico" />
+
+    <link rel="icon" href="~/Content/media/favicon.ico">
 </head>
 <body>
     <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
@@ -41,23 +44,28 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#">Contacto</a>
                 </li>
-                <li class="nav-item active" style="padding-left:300px">
-                    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#contactoModal">¡Contactanos!</button>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <button type="button" class="btn btn-info " data-toggle="modal" data-target="#contactoModal">¡Contáctanos!</button>
                 </li>
             </ul>
         </div>
+        
     </nav>
 
 
 
-    <main class="container" role="main">
-        <div class="container body-content">
+    <main class="container-fluid" role="main">
+        @*<div class="container-fluid">*@
             @RenderBody()
+
             <hr />
             <footer>
-                <p>&copy; @DateTime.Now.Year - Mi aplicación ASP.NET</p>
+                <p>&copy; @DateTime.Now.Year - Quadware</p>
+                <p>Siguenos en nuestras rede sosicales. (Poner iconos de redes sociales)</p>
             </footer>
-        </div>
+        @*</div>*@
     </main>
 
     <!-- Modal -->
@@ -96,6 +104,10 @@
     @Scripts.Render("~/bundle/popperjs")
     @Scripts.Render("~/bundle/materializejs")
     <script>$(document).ready(function () { $('body').bootstrapMaterialDesign(); });</script>
+
+    <!--Custom-->
+    <script src="~/Scripts/pagina/Modal.js"></script>
+
     @RenderSection("scripts", required: false)
 </body>
 </html>

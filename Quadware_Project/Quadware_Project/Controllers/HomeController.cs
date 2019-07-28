@@ -31,29 +31,29 @@ namespace Quadware_Project.Controllers
 
         public JsonResult ContactarEmail(string correo, string mensaje)
         {
-            SmtpClient smtpClient = new SmtpClient();
-            smtpClient.UseDefaultCredentials = false;
-            smtpClient.Credentials = new NetworkCredential("contacto@quadware.mx", "falta contraseña");
-            smtpClient.Port = 587; //falta puerto
-            smtpClient.Host = "falta el host";
-            smtpClient.EnableSsl = true;
-            MailMessage mail = new MailMessage();
-            mail.From = new MailAddress("contacto@quadware.mx");
-            mail.To.Add(correo);
-            mail.Subject = "Algo";
-            mail.IsBodyHtml = true;
-            mail.Body = "";
-
             try
             {
+                SmtpClient smtpClient = new SmtpClient();
+                smtpClient.UseDefaultCredentials = false;
+                smtpClient.Credentials = new NetworkCredential("contacto@quadware.mx", "falta contraseña");
+                smtpClient.Port = 587; //falta puerto
+                smtpClient.Host = "falta el host";
+                smtpClient.EnableSsl = true;
+                MailMessage mail = new MailMessage();
+                mail.From = new MailAddress("contacto@quadware.mx");
+                mail.To.Add(correo);
+                mail.Subject = "Algo";
+                mail.IsBodyHtml = true;
+                mail.Body = "";
+
                 smtpClient.Send(mail);
             }
             catch (SmtpException e)
             {
-                return Json("'response':'Hubo un error con el servidor...'" + e.Message.ToString());
+                return Json("Error 500 internal: " + e.Message.ToString());
             }
 
-            return Json(String.Format("'response':'Ok'"));
+            return Json(String.Format("Ok"));
         }
     }
 }

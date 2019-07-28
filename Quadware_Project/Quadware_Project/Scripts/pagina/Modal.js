@@ -1,26 +1,34 @@
 ﻿$(document).ready(function () {
-    $('#enviar').click(function () {
-        var contacto = {
-            correo: $('#inputEmail').val(),
-            mensaje: $('#textArea').val()
-        };
+    $('#openmodal').click(function () {
+        $('#contactoModal').modal('toggle');
     });
+    $('#enviar').click(function () {
+        var frm = new FormData();
+        frm.append("correo", $('#inputEmail').val());
+        frm.append("mensaje", $('#textArea').val());
+        EnviarCorreo(frm);
+    });
+
 });
 
 function EnviarCorreo(contacto) {
     $.ajax({
-        url: "ContactarEmail",
+        url: "/Home/ContactarEmail",
+        processData: false,
+        contentType: false,
         type: "POST",
-        content: "application/json; charset=utf-8",
         dataType: "json",
-        data: JSON.stringify(data),
+        data: contacto,
         success: function (data) {
-            if (data.response == "Ok") {
+            if (data == "Ok") {
                 console.log("Todo bien");
             }
             else {
-                alert(data.response);
+                alert(data);
             }
+        },
+        error: function () {
+            alert("Algo mal en el ajax");
         }
     });
 }

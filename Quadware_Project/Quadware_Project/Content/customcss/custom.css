@@ -1,0 +1,20 @@
+﻿/*Color a las letras*/
+.text--gradient {
+    -webkit-background-clip: text;
+    background-image: -webkit-linear-gradient(107deg,#000099,#0099cc);
+    color: gradient-color-at(#000099,#00ffcc);
+    -webkit-text-fill-color: transparent;
+}
+
+.button--gradiant {
+    color: #fff;
+    background-image: -webkit-linear-gradient(140deg,#000099,#0099cc);
+}
+
+.spacer {
+    height: 10px;
+}
+
+.bg--gradient, .spacer {
+    background: linear-gradient(107deg,#000099,#0099cc);
+}
