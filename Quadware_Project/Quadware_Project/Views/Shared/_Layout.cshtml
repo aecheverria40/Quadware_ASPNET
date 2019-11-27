@@ -58,17 +58,19 @@
 
 
 
-    <main class="container-fluid" role="main">
+    @*<main class="container-fluid" role="main">*@
         @*<div class="container-fluid">*@
         @RenderBody()
 
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - Quadware</p>
-            <p>Siguenos en nuestras rede sosicales. (Poner iconos de redes sociales)</p>
+            <div class="container-fluid">
+                <p>&copy; @DateTime.Now.Year - Quadware</p>
+                <p>Siguenos en nuestras rede sosicales. (Poner iconos de redes sociales)</p>
+            </div>
         </footer>
         @*</div>*@
-    </main>
+    @*</main>*@
 
     <!-- Modal -->
     <div class="modal fade" id="contactoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
